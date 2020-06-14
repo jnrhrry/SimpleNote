@@ -1,8 +1,9 @@
-package com.januar.simplenote.helper
+package com.januar.consumerapp.helper
 
 import android.database.Cursor
-import com.januar.simplenote.db.DatabaseContract
-import com.januar.simplenote.entity.Note
+import com.januar.consumerapp.entity.Note
+import com.januar.consumerapp.db.DatabaseContract
+
 
 object MappingHelper {
     fun mapCursorToArrayList(noteCursor: Cursor?):ArrayList<Note>{
@@ -14,7 +15,14 @@ object MappingHelper {
                 val title = getString(getColumnIndexOrThrow(DatabaseContract.NoteColumns.TITLE))
                 val description = getString(getColumnIndexOrThrow(DatabaseContract.NoteColumns.DESCRIPTION))
                 val date = getString(getColumnIndexOrThrow(DatabaseContract.NoteColumns.DATE))
-                noteList.add(Note(id, title, description, date))
+                noteList.add(
+                    Note(
+                        id,
+                        title,
+                        description,
+                        date
+                    )
+                )
 
             }
         }
@@ -22,7 +30,7 @@ object MappingHelper {
         return noteList
     }
 
-    fun mapCursorToObject(noteCursor: Cursor?): Note{
+    fun mapCursorToObject(noteCursor: Cursor?): Note {
         var note = Note()
         noteCursor?.apply {
             moveToFirst()
@@ -30,7 +38,8 @@ object MappingHelper {
             val title = getString(getColumnIndexOrThrow(DatabaseContract.NoteColumns.TITLE))
             val description = getString(getColumnIndexOrThrow(DatabaseContract.NoteColumns.DESCRIPTION))
             val date = getString(getColumnIndexOrThrow(DatabaseContract.NoteColumns.DATE))
-            note = Note(id, title, description, date)
+            note =
+                Note(id, title, description, date)
         }
         return note
     }

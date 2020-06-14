@@ -1,4 +1,4 @@
-package com.januar.simplenote
+package com.januar.consumerapp
 
 import android.content.Intent
 import android.database.ContentObserver
@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
-import android.os.Message
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.januar.consumerapp.entity.Note
+import com.januar.consumerapp.helper.MappingHelper
 import com.januar.simplenote.adapter.NoteAdapter
 import com.januar.simplenote.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
 import com.januar.simplenote.db.NoteHelper

@@ -1,4 +1,4 @@
-package com.januar.simplenote.db
+package com.januar.consumerapp.db
 
 import android.net.Uri
 import android.provider.BaseColumns

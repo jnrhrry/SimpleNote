@@ -1,4 +1,4 @@
-package com.januar.simplenote
+package com.januar.consumerapp
 
 import android.content.ContentValues
 import android.content.Intent
@@ -10,12 +10,12 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.januar.simplenote.db.DatabaseContract
-import com.januar.simplenote.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.januar.simplenote.db.DatabaseContract.NoteColumns.Companion.DATE
-import com.januar.simplenote.db.NoteHelper
-import com.januar.simplenote.entity.Note
-import com.januar.simplenote.helper.MappingHelper
+import com.januar.consumerapp.db.DatabaseContract
+import com.januar.consumerapp.entity.Note
+import com.januar.consumerapp.helper.MappingHelper
+import com.januar.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.januar.consumerapp.db.DatabaseContract.NoteColumns.Companion.DATE
+import com.januar.consumerapp.db.NoteHelper
 import kotlinx.android.synthetic.main.activity_note_add_update.*
 import java.text.SimpleDateFormat
 import java.util.*
